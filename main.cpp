@@ -1,45 +1,16 @@
-/* Who.
-   Copyright 2020 Ankur Joshi <ankurjoshi@outlook.com>
-  
- * What.
-   Bittest.cpp (anding, oring and xoring variables) 
- 
- * Why.
-   Learning C++
- 
- * Testing.
-   Github integration in VSCode 
-   
- */
 
-#include <cstdio>
-#include <cstdlib>
 #include <iostream>
 using namespace std;
 
-int main (int nNumberofArgs, char* pszArgs[])
+int main ()
 {
-	cout.setf(cout.boolalpha); //set output format for bool variables to true and false instead of 1 and 0
-	
-	int nArg1;
-	cout << "Input value 1: ";
-	cin >> nArg1;
-	
-	int nArg2;
-	cout << "Input value 2: ";
-	cin >> nArg2;
-	
-	bool b;
-	b = nArg1 == nArg2;
-	//compare two variablees and store result in bool b
-	
-	cout << "This statement, " << nArg1
-	     << " equals "         << nArg2
-	     << " is "             << b
-			 << endl;
-	     
-	cout << "Press Enter to continue..." << endl;
-	cin.ignore(10, '\n');
-	cin.get();
+	int x=1,i,y; 
+for(i=0;i<5;i++) 
+    x+=3; 
+x%=5;  
+if(x%2==0) 
+   cout<<"x is even"; 
+else 
+   cout<<"x is odd";
 	return 0;
 }
