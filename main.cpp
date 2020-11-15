@@ -17,39 +17,29 @@
 #include <iostream>
 using namespace std;
 
-int main(int nNumberofArgs, char* pszArgs[])
+int main (int nNumberofArgs, char* pszArgs[])
 {
-	cout.unsetf(cout.dec);
-	cout.setf(cout.hex);
-	//set output format to hexadecimal
+	cout.setf(cout.boolalpha); //set output format for bool variables to true and false instead of 1 and 0
 	
-	int nArg1 = 0x78ABCDEF;
-	int nArg2 = 0x12345678;
+	int nArg1;
+	cout << "Input value 1: ";
+	cin >> nArg1;
 	
-	cout << " nArg1 = 0x" << nArg1 << endl;
-	cout << " ~nArg1 = 0x" << ~nArg1 << "\n" << endl;
-	cout << " nArg2 = 0x" << nArg2 << endl;
-	cout << "~nArg2 = 0x" << ~nArg2 << "\n" << endl;
+	int nArg2;
+	cout << "Input value 2: ";
+	cin >> nArg2;
 	
-	cout << "  0x" << nArg1 << "\n"
-	     << "& 0x" << nArg2 << "\n"
-	     << "  --------" << "\n"
-	     << "  0x" << (nArg1 & nArg2) << "\n"
-	     << endl;
+	bool b;
+	b = nArg1 == nArg2;
+	//compare two variablees and store result in bool b
 	
-	cout << "  0x" << nArg1 << "\n"
-	     << "| 0x" << nArg2 << "\n"
-	     << "  --------" << "\n"
-	     << "  0x" << (nArg1 | nArg2) << "\n"
-	     << endl;
-	
+	cout << "This statement, " << nArg1
+	     << " equals "         << nArg2
+	     << " is "             << b
+			 << endl;
 	     
-	cout << "  0x"  << nArg1 << "\n"
-	     << "^ 0x" << nArg2 << "\n"
-	     << " --------" << "\n"
-	     << "  0x" << (nArg1 ^ nArg2) << "\n"
-	     << endl;
-	     
-	 cout << "Press Enter to continue.." << endl;
-	 return 0;
+	cout << "Press Enter to continue..." << endl;
+	cin.ignore(10, '\n');
+	cin.get();
+	return 0;
 }
